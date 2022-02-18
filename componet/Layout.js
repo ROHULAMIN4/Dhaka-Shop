@@ -9,14 +9,14 @@ import {
   Link,
 } from "@material-ui/core";
 import useStyles from "../utils/Style";
-// import { Link } from "@material-ui/core";
 
-export default function Layout({ children }) {
+export default function Layout({ title, children, description }) {
   const classes = useStyles();
   return (
     <div>
       <Head>
-        <title>Amazona</title>
+        <title> {title ? `${title}- DhakaShop` : "Amazona"}</title>
+        {description && <meta name="description" content={description}></meta>}
       </Head>
       <AppBar className={classes.navbar} position="static">
         <Toolbar>
