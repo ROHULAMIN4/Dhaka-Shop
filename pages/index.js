@@ -37,7 +37,7 @@ export default function Home() {
                 </NextLink>
                 <CardActions>
                   <Typography> {product.price}$</Typography>
-                  <Button size="small" color="primary">
+                  <Button size="small" style={{ backgroundColor: "#f0c000" }}>
                     Add to cart
                   </Button>
                 </CardActions>

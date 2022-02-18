@@ -26,7 +26,16 @@ export default function ProductScreen() {
     <Layout title={product.name} description={product.description}>
       <div className={classes.secttion}>
         <NextLink href="/" passHref>
-          <Link>back to home page</Link>
+          <Link
+            style={{
+              color: "#f0c000",
+              marginTop: "20px",
+              fontWeight: 500,
+              fontSize: "25px",
+            }}
+          >
+            back to home page
+          </Link>
         </NextLink>
       </div>
       <Grid container spacing={1}>
@@ -42,6 +51,15 @@ export default function ProductScreen() {
         {/* product description */}
         <Grid item md={3} xs={12}>
           <List>
+            <ListItem>
+              <Typography
+                component="h1"
+                variant="h4"
+                style={{ fontWeight: 700 }}
+              >
+                {product.name}
+              </Typography>
+            </ListItem>
             <ListItem>
               <Typography>Catogory:{product.category}</Typography>
             </ListItem>
@@ -85,7 +103,11 @@ export default function ProductScreen() {
                 </Grid>
               </ListItem>
               <ListItem>
-                <Button fullWidth variant="contained" color="primary">
+                <Button
+                  fullWidth
+                  variant="contained"
+                  style={{ backgroundColor: "#f0c000" }}
+                >
                   Add to cart
                 </Button>
               </ListItem>
